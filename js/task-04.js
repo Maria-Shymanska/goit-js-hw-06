@@ -2,23 +2,22 @@
 // 2.Додати слухачів кліків до кнопок, всередині яких збільшує або зменшує значення лічильника.
 // 3.Оновлювати інтерфейс новим значенням змінної counterValue.
 
-const valueBtn = document.querySelector("#counter");
-
-let counterValue = 0;
-
+const valueBtn = document.querySelector("#value");
 const btnUp = document.querySelector(`button [data-action = "decrement"]`);
 const btnDown = document.querySelector(`button [data-action = "increment"]`);
 
-btnUp.addEventListener("click", counterValue);
+let counterValue = 0;
 
-btnDown.addEventListener("click", counterValue);
-
-function onBtnUpClick() {
+const onBtnUpClick = () => {
   counterValue += 1;
-  valueBtn.textContent = counterValue;
-}
+  value.textContent = counterValue;
+};
 
-function onBtnDownClick() {
+const onBtnDownClick = () => {
   counterValue -= 1;
-  valueBtn.textContent = counterValue;
-}
+  value.textContent = counterValue;
+};
+
+btnUp.addEventListener("click", onBtnUpClick);
+
+btnDown.addEventListener("click", onBtnDownClick);
