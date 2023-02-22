@@ -6,7 +6,7 @@ const counterValue = document.querySelector("#value");
 let newValue = 0;
 
 const btnUp = document.querySelector(`button[ data-action = "increment"]`);
-const btnDown = document.querySelector(`button[ data-action = "decreentm"]`);
+const btnDown = document.querySelector(`button[ data-action = "decrement"]`);
 
 btnUp.addEventListener("click", onBtnUpClick);
 btnDown.addEventListener("click", onBtnDownClick);
